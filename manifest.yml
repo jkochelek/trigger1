@@ -1,0 +1,15 @@
+permissions:
+  scopes:
+    - 'write:jira-work'
+modules:
+  trigger:
+    - key: issue-created-event
+      function: main
+      events:
+        - avi:activity:created:issue
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/4e205b30-7eb1-4e28-a256-f721bd3f77dc
+  name: trigger1
